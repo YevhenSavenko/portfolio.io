@@ -10,7 +10,10 @@ $('.projects__slider').slick({
 // skills__circle-animate_7
 /**************Animate******************/
 
-let animItems = document.querySelector('._line');
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    let animItems = document.querySelector('._line');
 let points = document.querySelectorAll('._point');
 let circleItems = document.querySelectorAll('.skills__circle-border');
 const skills = document.querySelectorAll('.skills__number');
@@ -113,27 +116,27 @@ for (let i = 0; i < linkNav.length; i++) {
     }, false);
 }
 
-
-
-document.addEventListener("DOMContentLoaded", (function(d){
-    function c(k){return(d.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2];}
-    var ua = navigator.userAgent,
-        ismobile = / mobile/i.test(ua),
-        mgecko = !!( / gecko/i.test(ua) && / firefox\//i.test(ua)),
-        wasmobile = c('wasmobile') === "was",
-        desktopvp = 'user-scalable=yes, width=1600, minimum-width=1600',
-        el;
-    if (ismobile && !wasmobile) {
-        d.cookie = "wasmobile=was";
-    }
-    else if (!ismobile && wasmobile) {
-        if (mgecko) {
-            el = d.createElement('meta');
-            el.setAttribute('content', desktopvp);
-            el.setAttribute('name', 'viewport');
-            d.getElementsByTagName('head')[0].appendChild(el);
-        }else{
-            d.getElementsByName('viewport')[0].setAttribute('content', desktopvp);
+    (function(d){
+        function c(k){return(d.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2];}
+        var ua = navigator.userAgent,
+            ismobile = / mobile/i.test(ua),
+            mgecko = !!( / gecko/i.test(ua) && / firefox\//i.test(ua)),
+            wasmobile = c('wasmobile') === "was",
+            desktopvp = 'user-scalable=yes, width=1600, minimum-width=1600',
+            el;
+        if (ismobile && !wasmobile) {
+            d.cookie = "wasmobile=was";
         }
-    }
-}(document)));
+        else if (!ismobile && wasmobile) {
+            if (mgecko) {
+                el = d.createElement('meta');
+                el.setAttribute('content', desktopvp);
+                el.setAttribute('name', 'viewport');
+                d.getElementsByTagName('head')[0].appendChild(el);
+            }else{
+                d.getElementsByName('viewport')[0].setAttribute('content', desktopvp);
+            }
+        }
+    }(document))
+
+});
