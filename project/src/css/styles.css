@@ -453,6 +453,10 @@ section {
 
 .slick-dots li {
   margin-right: 25px; }
+  .slick-dots li:last-child {
+    margin-right: 0; }
+  .slick-dots li:first-child {
+    margin-left: 0; }
 
 .slick-dots li button {
   border: 1px solid #cdcdcd;
@@ -1128,11 +1132,18 @@ section {
     .projects__slider img {
       width: 250px; }
   .projects__link a {
+    margin-left: 6px;
     font-size: 20px;
     text-align: center;
     padding: 15px 80px; }
   .slick-arrow {
     display: none !important; }
+  .slick-dots li button {
+    width: 8px;
+    height: 8px; }
+    .slick-dots li button:before {
+      width: 12px;
+      height: 12px; }
   .contacts__headding-form {
     line-height: 1.5; } }
 
