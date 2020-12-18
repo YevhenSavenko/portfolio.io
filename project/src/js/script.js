@@ -113,7 +113,9 @@ for (let i = 0; i < linkNav.length; i++) {
     }, false);
 }
 
-(function(d){
+
+
+document.addEventListener("DOMContentLoaded", (function(d){
     function c(k){return(d.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2];}
     var ua = navigator.userAgent,
         ismobile = / mobile/i.test(ua),
@@ -134,4 +136,4 @@ for (let i = 0; i < linkNav.length; i++) {
             d.getElementsByName('viewport')[0].setAttribute('content', desktopvp);
         }
     }
-}(document));
+}(document)));
