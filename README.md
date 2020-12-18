@@ -1,1 +1,1 @@
-# projects/index.html
+# project/index.html
